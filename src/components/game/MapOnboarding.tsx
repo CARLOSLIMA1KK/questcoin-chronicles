@@ -61,7 +61,7 @@ const steps: Step[] = [
     iconBg: "bg-game-gold/15",
     iconColor: "text-game-gold",
     title: "Missões diárias 🏆",
-    desc: "Todo dia tem desafios novos pra ganhar Créditos Estelares e XP extra. Volte sempre pra não perder!",
+    desc: "Todo dia tem desafios novos pra ganhar Star Coin e XP extra. Volte sempre pra não perder!",
     preview: (
       <div className="rounded-xl border border-white/10 bg-black/40 p-3 text-xs">
         <div className="flex items-center justify-between">

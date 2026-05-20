@@ -118,7 +118,7 @@ export function ResultScreen({
             <p className="text-[10px] uppercase tracking-wider text-muted-foreground">XP</p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-black/30 p-3 animate-[pop_0.25s_ease-out_0.26s_both]">
-            <img src={kCoin} alt="Créditos Estelares" width={32} height={32} className="mx-auto h-7 w-7" />
+            <img src={kCoin} alt="Star Coin" width={32} height={32} className="mx-auto h-7 w-7" />
             <p className="mt-1 font-display text-xl text-game-gold">+{coins}</p>
             <p className="text-[10px] uppercase tracking-wider text-muted-foreground">Créditos</p>
           </div>

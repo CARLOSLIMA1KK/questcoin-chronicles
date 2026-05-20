@@ -2,7 +2,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription } from "
 import { Button3D } from "./Button3D";
 import type { Stage } from "@/lib/curriculum";
 import type { StageStatus } from "@/lib/progress";
-import kCoin from "@/assets/k-coin.webp";
+import kCoin from "@/assets/k-coin-v2.png";
 import { Sparkles, Lock } from "lucide-react";
 import stageAula from "@/assets/stage-aula.webp";
 import stagePratica from "@/assets/stage-pratica.webp";
@@ -92,7 +92,7 @@ export function StageSheet({
               +{stage.rewards.xp} XP
             </span>
             <span className="text-muted-foreground">·</span>
-            <img src={kCoin} alt="K-Coin" width={24} height={24} className="h-6 w-6" />
+            <img src={kCoin} alt="Star Coin" width={24} height={24} className="h-6 w-6" />
             <span className="font-display text-sm text-game-gold">
               +{stage.rewards.coins}
             </span>

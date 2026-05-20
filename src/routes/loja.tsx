@@ -16,16 +16,16 @@ import { Button3D } from "@/components/game/Button3D";
 import { SHOP_ITEMS, MOCK_FRIENDS, appendHistory, type ShopItem, type Friend } from "@/lib/shop";
 import { useWallet, wallet } from "@/lib/wallet";
 import { playSfx } from "@/lib/sfx";
-import kCoin from "@/assets/k-coin.webp";
+import kCoin from "@/assets/k-coin-v2.png";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/loja")({
   head: () => ({
     meta: [
       { title: "Loja do Mestre — Mestre Finan" },
-      { name: "description", content: "Gaste seus K-Coins com sabedoria: escudos, presentes e boosts pra sua jornada." },
+      { name: "description", content: "Gaste seus Star Coins com sabedoria: escudos, presentes e boosts pra sua jornada." },
       { property: "og:title", content: "Loja do Mestre — Mestre Finan" },
-      { property: "og:description", content: "Gaste seus K-Coins com sabedoria: escudos, presentes e boosts pra sua jornada." },
+      { property: "og:description", content: "Gaste seus Star Coins com sabedoria: escudos, presentes e boosts pra sua jornada." },
     ],
   }),
   component: LojaPage,
@@ -107,7 +107,7 @@ function LojaPage() {
         <GlassPanel className="p-3">
           <p className="text-[11px] leading-relaxed text-foreground/65">
             <span className="font-semibold text-foreground">Dica do Mestre:</span>{" "}
-            cada K-Coin investido rende todo dia. Pense duas vezes antes de gastar! 💡
+            cada Star Coin investido rende todo dia. Pense duas vezes antes de gastar! 💡
           </p>
         </GlassPanel>
       </div>
@@ -154,7 +154,7 @@ function LojaPage() {
               )}
 
               <div className="mt-5 flex items-center gap-3 rounded-2xl border border-white/10 bg-black/30 px-4 py-3">
-                <img src={kCoin} alt="K-Coin" width={24} height={24} className="h-6 w-6" />
+                <img src={kCoin} alt="Star Coin" width={24} height={24} className="h-6 w-6" />
                 <span className="font-display text-sm text-game-gold">
                   −{pending.price}
                 </span>
