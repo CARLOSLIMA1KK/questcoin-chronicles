@@ -1,17 +1,17 @@
 import { useEffect, useMemo, useState } from "react";
 import { CloseX } from "@/components/game/CloseX";
 import { useNavigate } from "@tanstack/react-router";
-import mestreImg from "@/assets/mestre-finan.webp";
+import astrodinImg from "@/assets/astrodin-avatar.png";
 
 const GREETINGS = [
-  "Olá, bem-vindo de volta! Como está, jovem aventureiro?",
-  "Pronto para continuar a jornada? Que tal o Mundo 1?",
-  "Que bom te ver! Bora investir um pouco hoje?",
-  "Saudações! Já visitou seu cofrinho hoje?",
-  "Olá, herói! Posso te dar uma dica de mesada?",
-  "Bem-vindo! Quer entender juros de forma simples?",
-  "Ei, aventureiro! Vamos planejar uma meta de compra?",
-  "Olá! Que tal aprender sobre necessidade x desejo?",
+  "Olá, cadete! Pronto para mais uma missão?",
+  "Bora decolar pro Planeta Mesada hoje?",
+  "Já passou no seu cofrinho estelar?",
+  "Cadete, posso te dar uma dica de órbita?",
+  "Olá, herói da galáxia! Vamos planejar uma meta?",
+  "Quer entender juros sem virar buraco negro?",
+  "Ei, tripulação! Bora investir uns créditos?",
+  "Pronto pra mais um briefing financeiro?",
 ];
 
 function pickGreeting() {
@@ -58,7 +58,7 @@ export function MestreFAB() {
               className="absolute -right-1 -top-1"
             />
             <p className="font-display text-[10px] uppercase tracking-wider text-game-gold">
-              Mestre Finan
+              Astrodin
             </p>
             <button
               type="button"
@@ -76,13 +76,13 @@ export function MestreFAB() {
         <button
           type="button"
           onClick={goToMestre}
-          aria-label="Falar com o Mestre Finan"
+          aria-label="Falar com o Astrodin"
           className="relative grid h-16 w-16 place-items-center rounded-full border-2 border-game-gold bg-[image:var(--gradient-hero)] shadow-[var(--shadow-glow-gold)] transition-transform hover:scale-105 active:scale-95"
         >
           <img
-            src={mestreImg}
+            src={astrodinImg}
             alt=""
-            className="h-[88%] w-[88%] rounded-full object-contain animate-[float_3s_ease-in-out_infinite]"
+            className="h-[92%] w-[92%] rounded-full object-contain animate-[float_3s_ease-in-out_infinite]"
             draggable={false}
           />
           <span className="absolute -top-1 -right-1 grid h-5 w-5 place-items-center rounded-full border border-game-gold bg-card font-display text-[10px] text-game-gold">

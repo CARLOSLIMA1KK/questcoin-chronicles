@@ -4,10 +4,10 @@ import { MestreChat } from "@/components/game/MestreChat";
 export const Route = createFileRoute("/mestre")({
   head: () => ({
     meta: [
-      { title: "Mestre Finan — Tutor" },
-      { name: "description", content: "Converse com o Mestre Finan e receba orientações financeiras." },
-      { property: "og:title", content: "Mestre Finan — Tutor" },
-      { property: "og:description", content: "Converse com o Mestre Finan e receba orientações financeiras." },
+      { title: "Astrodin — Tutor FORME" },
+      { name: "description", content: "Converse com o Astrodin e receba orientações financeiras da FORME." },
+      { property: "og:title", content: "Astrodin — Tutor FORME" },
+      { property: "og:description", content: "Converse com o Astrodin e receba orientações financeiras da FORME." },
     ],
   }),
   component: MestrePage,

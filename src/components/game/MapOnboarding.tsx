@@ -36,11 +36,11 @@ const steps: Step[] = [
     icon: <MapIcon className="h-7 w-7" />,
     iconBg: "bg-game-neon/15",
     iconColor: "text-game-neon",
-    title: "Sua jornada em mundos 🗺️",
-    desc: "Cada mundo tem várias fases. Conclua uma pra liberar a próxima e avance pelo mapa do Mestre Finan.",
+    title: "Sua jornada pela galáxia 🚀",
+    desc: "Cada planeta tem várias missões. Conclua uma pra liberar a próxima e avance pelo mapa cósmico do Astrodin.",
     preview: (
       <div className="rounded-xl border border-white/10 bg-black/40 p-3">
-        <p className="text-[10px] uppercase tracking-wider text-game-neon">Mundo 1 · Iniciante</p>
+        <p className="text-[10px] uppercase tracking-wider text-game-neon">Planeta 1 · Cadete</p>
         <div className="mt-2 flex items-center justify-center gap-3">
           <span className="grid h-9 w-9 place-items-center rounded-full bg-game-neon/20 text-game-neon ring-2 ring-game-neon">
             <Star className="h-4 w-4" fill="currentColor" />
@@ -61,7 +61,7 @@ const steps: Step[] = [
     iconBg: "bg-game-gold/15",
     iconColor: "text-game-gold",
     title: "Missões diárias 🏆",
-    desc: "Todo dia tem desafios novos pra ganhar K-Coin e XP extra. Volte sempre pra não perder!",
+    desc: "Todo dia tem desafios novos pra ganhar Créditos Estelares e XP extra. Volte sempre pra não perder!",
     preview: (
       <div className="rounded-xl border border-white/10 bg-black/40 p-3 text-xs">
         <div className="flex items-center justify-between">

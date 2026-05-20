@@ -14,10 +14,10 @@ import { MapOnboarding, shouldShowMapaOnboarding } from "@/components/game/MapOn
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Mapa — Mestre Finan" },
-      { name: "description", content: "Sua jornada financeira começa aqui." },
-      { property: "og:title", content: "Mapa — Mestre Finan" },
-      { property: "og:description", content: "Sua jornada financeira começa aqui." },
+      { title: "Galáxia FORME — Astrodin" },
+      { name: "description", content: "Sua jornada financeira pelo cosmos começa aqui, cadete." },
+      { property: "og:title", content: "Galáxia FORME — Astrodin" },
+      { property: "og:description", content: "Sua jornada financeira pelo cosmos começa aqui, cadete." },
     ],
   }),
   component: Index,
