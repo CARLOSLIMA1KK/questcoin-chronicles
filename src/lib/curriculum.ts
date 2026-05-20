@@ -1,9 +1,9 @@
-import worldBomSenso from "@/assets/world-bom-senso-v2.webp";
-import worldMesada from "@/assets/world-mesada-v2.webp";
-import worldJuros from "@/assets/world-juros-v2.webp";
-import worldConsumidor from "@/assets/world-consumidor-v2.webp";
-import worldMetas from "@/assets/world-metas-v2.webp";
-import worldCartao from "@/assets/world-cartao-v2.webp";
+import worldBomSenso from "@/assets/world-bom-senso-v3.png";
+import worldMesada from "@/assets/world-mesada-v3.png";
+import worldJuros from "@/assets/world-juros-v3.png";
+import worldConsumidor from "@/assets/world-consumidor-v3.png";
+import worldMetas from "@/assets/world-metas-v3.png";
+import worldCartao from "@/assets/world-cartao-v3.png";
 
 export type StageType = "content" | "practice" | "boss";
 
