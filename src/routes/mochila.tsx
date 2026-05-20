@@ -6,9 +6,9 @@ import { PagePlaceholder } from "@/components/game/PagePlaceholder";
 export const Route = createFileRoute("/mochila")({
   head: () => ({
     meta: [
-      { title: "Mochila — Mestre Finan" },
+      { title: "Mochila — Astrodin" },
       { name: "description", content: "Itens, conquistas e bens que você acumulou na jornada." },
-      { property: "og:title", content: "Mochila — Mestre Finan" },
+      { property: "og:title", content: "Mochila — Astrodin" },
       { property: "og:description", content: "Itens, conquistas e bens que você acumulou na jornada." },
     ],
   }),

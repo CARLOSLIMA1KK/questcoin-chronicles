@@ -1,9 +1,11 @@
-import worldBomSenso from "@/assets/world-bom-senso-v3.png";
-import worldMesada from "@/assets/world-mesada-v3.png";
-import worldJuros from "@/assets/world-juros-v3.png";
-import worldConsumidor from "@/assets/world-consumidor-v3.png";
-import worldMetas from "@/assets/world-metas-v3.png";
-import worldCartao from "@/assets/world-cartao-v3.png";
+import { WORLDS_ART } from "./brandAssets";
+
+const worldBomSenso = WORLDS_ART.bomSenso;
+const worldMesada = WORLDS_ART.mesada;
+const worldJuros = WORLDS_ART.juros;
+const worldConsumidor = WORLDS_ART.consumidor;
+const worldMetas = WORLDS_ART.metas;
+const worldCartao = WORLDS_ART.cartao;
 
 export type StageType = "content" | "practice" | "boss";
 

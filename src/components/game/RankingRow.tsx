@@ -7,9 +7,10 @@ type Props = {
   subtitle: string;
   score: number;
   isMe?: boolean;
+  avatarUrl?: string;
 };
 
-export function RankingRow({ position, name, subtitle, score, isMe }: Props) {
+export function RankingRow({ position, name, subtitle, score, isMe, avatarUrl }: Props) {
   return (
     <div
       className={cn(
@@ -22,6 +23,11 @@ export function RankingRow({ position, name, subtitle, score, isMe }: Props) {
         "w-7 text-center font-display text-sm",
         isMe ? "text-[color:var(--game-neon)]" : "text-foreground/80",
       )}>{position}</div>
+      {avatarUrl && (
+        <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full border border-white/15 bg-[color:var(--game-purple)]/40">
+          <img src={avatarUrl} alt="" loading="lazy" width={36} height={36} className="h-full w-full object-cover" />
+        </div>
+      )}
       <div className="flex-1 min-w-0">
         <div className="text-sm font-semibold text-foreground truncate">
           {name}

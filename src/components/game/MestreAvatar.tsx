@@ -1,8 +1,10 @@
-import astrodinDefault from "@/assets/astrodin-avatar.png";
-import astrodinHappy from "@/assets/astrodin-happy.png";
-import astrodinSad from "@/assets/astrodin-sad.png";
-import astrodinThinking from "@/assets/astrodin-thinking.png";
+import { ASTRODIN } from "@/lib/brandAssets";
 import { cn } from "@/lib/utils";
+
+const astrodinDefault = ASTRODIN.avatar;
+const astrodinHappy = ASTRODIN.happy;
+const astrodinSad = ASTRODIN.sad;
+const astrodinThinking = ASTRODIN.thinking;
 
 type Mood = "cheer" | "encourage" | "celebrate" | "boss" | "neutral";
 type Size = "sm" | "md" | "lg";
