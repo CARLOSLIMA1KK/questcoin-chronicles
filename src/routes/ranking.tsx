@@ -13,9 +13,9 @@ import { avatarForId } from "@/lib/brandAssets";
 export const Route = createFileRoute("/ranking")({
   head: () => ({
     meta: [
-      { title: "Ranking — Mestre Finan" },
+      { title: "Ranking — Astrodin" },
       { name: "description", content: "Veja os melhores aprendizes de finanças por turma, escola e geral." },
-      { property: "og:title", content: "Ranking — Mestre Finan" },
+      { property: "og:title", content: "Ranking — Astrodin" },
       { property: "og:description", content: "Veja os melhores aprendizes de finanças por turma, escola e geral." },
     ],
   }),
