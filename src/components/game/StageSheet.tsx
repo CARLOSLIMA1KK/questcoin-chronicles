@@ -2,7 +2,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription } from "
 import { Button3D } from "./Button3D";
 import type { Stage } from "@/lib/curriculum";
 import type { StageStatus } from "@/lib/progress";
-import kCoin from "@/assets/k-coin.webp";
+import kCoin from "@/assets/k-coin-v2.png";
 import { Sparkles, Lock } from "lucide-react";
 import stageAula from "@/assets/stage-aula.webp";
 import stagePratica from "@/assets/stage-pratica.webp";

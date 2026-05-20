@@ -16,7 +16,7 @@ import { Button3D } from "@/components/game/Button3D";
 import { SHOP_ITEMS, MOCK_FRIENDS, appendHistory, type ShopItem, type Friend } from "@/lib/shop";
 import { useWallet, wallet } from "@/lib/wallet";
 import { playSfx } from "@/lib/sfx";
-import kCoin from "@/assets/k-coin.webp";
+import kCoin from "@/assets/k-coin-v2.png";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/loja")({

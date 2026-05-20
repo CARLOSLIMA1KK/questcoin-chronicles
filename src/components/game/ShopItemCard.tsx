@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import type { ShopItem } from "@/lib/shop";
-import kCoin from "@/assets/k-coin.webp";
+import kCoin from "@/assets/k-coin-v2.png";
 
 type Props = {
   item: ShopItem;
