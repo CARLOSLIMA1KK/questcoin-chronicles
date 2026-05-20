@@ -1,5 +1,5 @@
-import mestreImg from "@/assets/mestre-finan.webp";
-import kCoin from "@/assets/k-coin.webp";
+import astrodinImg from "@/assets/astrodin-avatar.png";
+import kCoin from "@/assets/k-coin-v2.png";
 import { useLoading } from "@/lib/loading";
 import { cn } from "@/lib/utils";
 
@@ -25,12 +25,12 @@ export function GlobalLoader() {
             <img
               src={kCoin}
               alt=""
-              className="h-full w-full [animation:coin-spin3d_1.2s_linear_infinite] [transform-style:preserve-3d] drop-shadow-[0_0_8px_oklch(0.86_0.17_88/0.6)]"
+              className="h-full w-full [animation:coin-spin3d_1.2s_linear_infinite] [transform-style:preserve-3d] drop-shadow-[0_0_8px_oklch(0.70_0.20_45/0.6)]"
             />
           </div>
-          {/* Owl */}
+          {/* Astrodin */}
           <img
-            src={mestreImg}
+            src={astrodinImg}
             alt=""
             aria-hidden
             draggable={false}

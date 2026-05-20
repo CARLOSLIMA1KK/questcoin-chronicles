@@ -1,4 +1,7 @@
-import mestreImg from "@/assets/mestre-finan.webp";
+import astrodinDefault from "@/assets/astrodin-avatar.png";
+import astrodinHappy from "@/assets/astrodin-happy.png";
+import astrodinSad from "@/assets/astrodin-sad.png";
+import astrodinThinking from "@/assets/astrodin-thinking.png";
 import { cn } from "@/lib/utils";
 
 type Mood = "cheer" | "encourage" | "celebrate" | "boss" | "neutral";
@@ -11,11 +14,19 @@ const SIZE_PX: Record<Size, string> = {
 };
 
 const MOOD_RING: Record<Mood, string> = {
-  cheer: "border-game-neon [box-shadow:0_0_24px_oklch(0.92_0.29_140/0.55)]",
-  encourage: "border-game-gold [box-shadow:0_0_24px_oklch(0.86_0.17_88/0.5)]",
-  celebrate: "border-game-gold [box-shadow:0_0_30px_oklch(0.86_0.17_88/0.6)]",
-  boss: "border-game-accent [box-shadow:0_0_36px_oklch(0.7_0.32_330/0.7)]",
+  cheer: "border-game-neon [box-shadow:0_0_24px_oklch(0.84_0.16_85/0.55)]",
+  encourage: "border-game-gold [box-shadow:0_0_24px_oklch(0.70_0.20_45/0.5)]",
+  celebrate: "border-game-gold [box-shadow:0_0_30px_oklch(0.70_0.20_45/0.6)]",
+  boss: "border-game-accent [box-shadow:0_0_36px_oklch(0.55_0.18_290/0.7)]",
   neutral: "border-white/20",
+};
+
+const MOOD_IMG: Record<Mood, string> = {
+  cheer: astrodinHappy,
+  celebrate: astrodinHappy,
+  encourage: astrodinSad,
+  boss: astrodinThinking,
+  neutral: astrodinDefault,
 };
 
 export function MestreAvatar({
@@ -39,10 +50,10 @@ export function MestreAvatar({
       )}
     >
       <img
-        src={mestreImg}
-        alt="Mestre Finan"
+        src={MOOD_IMG[mood]}
+        alt="Astrodin"
         className={cn(
-          "h-[88%] w-[88%] object-contain",
+          "h-[92%] w-[92%] object-contain",
           float && "animate-[float_3s_ease-in-out_infinite]",
         )}
         draggable={false}
@@ -78,7 +89,7 @@ export function MestreSpeech({
     >
       <p className="leading-snug">
         <span className="mr-1 font-display text-[11px] uppercase tracking-wider text-muted-foreground">
-          Mestre Finan ·
+          Astrodin ·
         </span>
         {message}
       </p>
