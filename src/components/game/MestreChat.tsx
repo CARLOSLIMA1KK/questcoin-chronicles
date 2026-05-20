@@ -1,7 +1,7 @@
 import { lazy, Suspense, useState } from "react";
 import { Plus, MessagesSquare, Trash2, Send } from "lucide-react";
 import type { UIMessage } from "ai";
-import mestreAvatar from "@/assets/mestre-finan.webp";
+import mestreAvatar from "@/assets/astrodin-avatar.png";
 import {
   Sheet,
   SheetContent,
@@ -18,37 +18,37 @@ const SUGGESTIONS = [
   {
     short: "Necessidade x desejo",
     text: "Qual a diferença entre necessidade e desejo?",
-    greeting: `Saudações, jovem aventureiro.\n\nVamos explorar juntos a diferença entre necessidade e desejo — um dos saberes mais valiosos para quem trilha o caminho do dinheiro consciente.\n\nMe conte: o que despertou a sua curiosidade sobre esse tema?`,
+    greeting: `Saudações, cadete!\n\nVamos explorar juntos a diferença entre necessidade e desejo — um dos saberes mais valiosos para quem navega o cosmos do dinheiro consciente.\n\nMe conte: o que despertou a sua curiosidade sobre esse tema?`,
   },
   {
     short: "Mesada",
     text: "Como começar uma poupança com a mesada?",
-    greeting: `Saudações, jovem aventureiro.\n\nA mesada é a sua primeira moeda de poder neste reino — e aprender a guardá-la é o início de toda grande jornada financeira.\n\nQuanto você costuma receber, e o que gostaria de conquistar com a sua poupança?`,
+    greeting: `Saudações, cadete!\n\nA mesada é o seu primeiro combustível nesta missão — e aprender a guardá-la é o início de toda grande jornada financeira.\n\nQuanto você costuma receber, e o que gostaria de conquistar com a sua poupança?`,
   },
   {
     short: "Juros",
     text: "O que é juros e por que eles crescem?",
-    greeting: `Saudações, jovem aventureiro.\n\nOs juros são como uma magia silenciosa: podem trabalhar a seu favor quando você poupa, ou contra você quando se endivida.\n\nPor onde prefere começar — entender como eles nascem ou como evitá-los?`,
+    greeting: `Saudações, cadete!\n\nOs juros são como gravidade cósmica: podem te impulsionar quando você poupa, ou te puxar pra um buraco negro quando se endivida.\n\nPor onde prefere começar — entender como eles nascem ou como evitá-los?`,
   },
   {
     short: "Consumidor",
     text: "Quais meus direitos como consumidor?",
-    greeting: `Saudações, jovem aventureiro.\n\nTodo consumidor carrega um escudo invisível: o Código de Defesa do Consumidor, que protege você em cada compra.\n\nQual situação você gostaria de entender melhor para usar bem esse escudo?`,
+    greeting: `Saudações, cadete!\n\nTodo consumidor carrega um escudo invisível: o Código de Defesa do Consumidor, que protege você em cada compra.\n\nQual situação você gostaria de entender melhor para usar bem esse escudo?`,
   },
   {
     short: "Metas",
     text: "Como planejar uma meta de compra?",
-    greeting: `Saudações, jovem aventureiro.\n\nToda grande conquista começa com uma meta clara — um destino no mapa para guiar suas moedas.\n\nO que você sonha em conquistar? Vamos transformar esse sonho em um plano.`,
+    greeting: `Saudações, cadete!\n\nToda grande conquista começa com uma meta clara — um destino no mapa estelar para guiar seus créditos.\n\nO que você sonha em conquistar? Vamos transformar esse sonho em um plano.`,
   },
   {
     short: "Cartão",
     text: "Cartão de crédito é dinheiro?",
-    greeting: `Saudações, jovem aventureiro.\n\nO cartão de crédito parece dinheiro, mas é, na verdade, um empréstimo disfarçado — uma ferramenta poderosa que exige sabedoria.\n\nO que você gostaria de descobrir primeiro sobre ele?`,
+    greeting: `Saudações, cadete!\n\nO cartão de crédito parece dinheiro, mas é, na verdade, um empréstimo disfarçado — uma ferramenta poderosa que exige sabedoria.\n\nO que você gostaria de descobrir primeiro sobre ele?`,
   },
 ];
 
-// Saudação padrão do Mestre Finan — usada quando o usuário abre o chat sem escolher tema.
-const DEFAULT_GREETING = `Saudações, jovem aventureiro.\n\nEu sou o Mestre Finan, guardião dos saberes do dinheiro.\n\nPosso te guiar por temas como mesada, poupança, juros, consumo consciente e direitos do consumidor.\n\nPor onde começamos a sua jornada?`;
+// Saudação padrão do Astrodin — usada quando o usuário abre o chat sem escolher tema.
+const DEFAULT_GREETING = `Saudações, cadete!\n\nEu sou o Astrodin, mascote da FORME e seu guia pela galáxia do dinheiro.\n\nPosso te ajudar com mesada, poupança, juros, consumo consciente e direitos do consumidor.\n\nPor onde começamos a sua missão?`;
 
 const buildGreeting = (text: string = DEFAULT_GREETING): UIMessage => ({
   id: `greet_${Math.random().toString(36).slice(2, 9)}`,
@@ -155,16 +155,16 @@ export function MestreChat() {
           <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-2xl bg-[image:var(--gradient-hero)] shadow-[var(--shadow-glow-gold)]">
             <img
               src={mestreAvatar}
-              alt="Mestre Finan"
+              alt="Astrodin"
               width={512}
               height={512}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-contain"
             />
           </div>
           <div className="leading-tight">
-            <h1 className="font-display text-xl text-game-gold">Mestre Finan</h1>
+            <h1 className="font-display text-xl text-game-gold">Astrodin</h1>
             <p className="text-[11px] uppercase tracking-wider text-muted-foreground">
-              Mentor da BNCC
+              Mentor FORME · BNCC
             </p>
           </div>
         </div>
@@ -287,7 +287,7 @@ function ChatSkeleton() {
             <span className="h-2 w-2 animate-bounce rounded-full bg-game-gold [animation-delay:-0.3s]" />
             <span className="h-2 w-2 animate-bounce rounded-full bg-game-gold [animation-delay:-0.15s]" />
             <span className="h-2 w-2 animate-bounce rounded-full bg-game-gold" />
-            <span className="ml-2">Carregando o Mestre...</span>
+            <span className="ml-2">Carregando o Astrodin...</span>
           </span>
         </div>
       </div>
@@ -318,10 +318,10 @@ function EmptyState({
       {/* Centered greeting */}
       <div className="flex flex-col items-center px-6 pt-6 text-center">
         <h2 className="font-display text-xl text-foreground">
-          Olá, aventureiro!
+          Olá, cadete!
         </h2>
         <p className="mt-1 text-xs text-muted-foreground">
-          Escolha um tema para começar sua jornada
+          Escolha uma missão para começar sua jornada
         </p>
       </div>
 
@@ -357,7 +357,7 @@ function EmptyState({
           className="flex w-full items-center gap-2 rounded-2xl border border-game-gold/40 bg-black/40 px-3 py-2.5 text-left shadow-[var(--shadow-glow-gold)] transition-colors hover:border-game-gold hover:bg-black/60"
         >
           <span className="flex-1 truncate px-1 text-sm text-muted-foreground">
-            Pergunte algo ao Mestre Finan...
+            Pergunte algo ao Astrodin...
           </span>
           <span className="grid h-9 w-9 place-items-center rounded-lg bg-[image:var(--gradient-hero)]">
             <Send className="h-4 w-4 text-game-gold" />

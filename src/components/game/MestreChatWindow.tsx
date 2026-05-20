@@ -44,9 +44,9 @@ export default function MestreChatWindow({
       console.error("Chat error", err);
       const msg = String(err?.message ?? "");
       if (/\b404\b|not\s*found/i.test(msg)) {
-        toast.error("Conexão com o Mestre indisponível. Recarregue a página.");
+        toast.error("Conexão com o Astrodin indisponível. Recarregue a página.");
       } else {
-        toast.error("O Mestre não conseguiu responder. Tente novamente.");
+        toast.error("O Astrodin não conseguiu responder. Tente novamente.");
       }
     },
   });
@@ -115,7 +115,7 @@ export default function MestreChatWindow({
           {status === "submitted" && (
             <Message from="assistant">
               <MessageContent>
-                <Shimmer>O Mestre está pensando...</Shimmer>
+                <Shimmer>O Astrodin está pensando...</Shimmer>
               </MessageContent>
             </Message>
           )}
@@ -123,7 +123,7 @@ export default function MestreChatWindow({
           {error && (
             is404 ? (
               <div className="space-y-2 rounded-xl border border-destructive/40 bg-destructive/10 px-3 py-3 text-sm text-destructive">
-                <p className="font-medium">⚠️ O Mestre está fora de alcance.</p>
+                <p className="font-medium">⚠️ O Astrodin está fora de alcance.</p>
                 <p className="text-destructive/80">
                   A conexão com o serviço de IA não foi encontrada (404).
                   Recarregue a página para reconectar.
@@ -152,7 +152,7 @@ export default function MestreChatWindow({
             ref={textareaRef}
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="Pergunte algo ao Mestre Finan..."
+            placeholder="Pergunte algo ao Astrodin..."
           />
           <PromptInputFooter className="justify-end">
             <PromptInputSubmit
