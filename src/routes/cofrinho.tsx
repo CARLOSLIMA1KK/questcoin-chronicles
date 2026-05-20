@@ -40,13 +40,13 @@ import { playSfx } from "@/lib/sfx";
 export const Route = createFileRoute("/cofrinho")({
   head: () => ({
     meta: [
-      { title: "Cofrinho — Mestre Finan" },
+      { title: "Cofrinho — Astrodin" },
       {
         name: "description",
         content:
           "Invista seus Star Coin em um CDB simulado e veja seu dinheiro render todos os dias.",
       },
-      { property: "og:title", content: "Cofrinho — Mestre Finan" },
+      { property: "og:title", content: "Cofrinho — Astrodin" },
       {
         property: "og:description",
         content:

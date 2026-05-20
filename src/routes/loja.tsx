@@ -22,9 +22,9 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/loja")({
   head: () => ({
     meta: [
-      { title: "Loja do Mestre — Mestre Finan" },
+      { title: "Loja do Mestre — Astrodin" },
       { name: "description", content: "Gaste seus Star Coins com sabedoria: escudos, presentes e boosts pra sua jornada." },
-      { property: "og:title", content: "Loja do Mestre — Mestre Finan" },
+      { property: "og:title", content: "Loja do Mestre — Astrodin" },
       { property: "og:description", content: "Gaste seus Star Coins com sabedoria: escudos, presentes e boosts pra sua jornada." },
     ],
   }),

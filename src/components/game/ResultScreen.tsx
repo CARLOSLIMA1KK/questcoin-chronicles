@@ -56,7 +56,7 @@ export function ResultScreen({
             : "border-game-gold/40 [box-shadow:0_0_40px_oklch(0.86_0.17_88/0.4)]",
         )}
       >
-        {/* Mestre Finan */}
+        {/* Astrodin */}
         <div className="relative mx-auto -mt-16 w-fit">
           <MestreAvatar size="lg" mood={mood} />
           <span

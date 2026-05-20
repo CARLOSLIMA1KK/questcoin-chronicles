@@ -79,10 +79,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Mestre Finan — Gamificação Financeira" },
+      { title: "Astrodin — Gamificação Financeira" },
       { name: "description", content: "Aprenda finanças jogando: trilhas, missões e recompensas alinhadas à BNCC." },
-      { name: "author", content: "Mestre Finan" },
-      { property: "og:title", content: "Mestre Finan — Gamificação Financeira" },
+      { name: "author", content: "Astrodin" },
+      { property: "og:title", content: "Astrodin — Gamificação Financeira" },
       { property: "og:description", content: "Aprenda finanças jogando: trilhas, missões e recompensas alinhadas à BNCC." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },

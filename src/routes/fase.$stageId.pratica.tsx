@@ -16,7 +16,7 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/fase/$stageId/pratica")({
   head: () => ({
     meta: [
-      { title: "Prática — Mestre Finan" },
+      { title: "Prática — Astrodin" },
       { name: "description", content: "Coloque o que aprendeu em prática." },
     ],
   }),
