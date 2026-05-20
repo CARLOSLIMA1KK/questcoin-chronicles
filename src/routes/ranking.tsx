@@ -8,15 +8,7 @@ import { RankingRow } from "@/components/game/RankingRow";
 import { RankingScopeTabs } from "@/components/game/RankingScopeTabs";
 import { MyPositionBar } from "@/components/game/MyPositionBar";
 import { getMonthInfo, useRanking, type Scope } from "@/lib/ranking";
-import avatar1 from "@/assets/avatar-student-1.webp";
-import avatar2 from "@/assets/avatar-student-2.webp";
-import avatar3 from "@/assets/avatar-student-3.webp";
-
-const PODIUM_AVATARS: Record<1 | 2 | 3, string> = {
-  1: avatar1,
-  2: avatar2,
-  3: avatar3,
-};
+import { avatarForId } from "@/lib/brandAssets";
 
 export const Route = createFileRoute("/ranking")({
   head: () => ({
@@ -65,9 +57,9 @@ function RankingPage() {
 
         <GlassPanel className="px-4 pt-8 pb-4">
           <div className="flex items-end justify-center gap-4">
-            {p2 && <PodiumCard place={2} name={p2.name} score={p2.score} isMe={p2.isMe} avatarUrl={PODIUM_AVATARS[2]} />}
-            {p1 && <PodiumCard place={1} name={p1.name} score={p1.score} isMe={p1.isMe} avatarUrl={PODIUM_AVATARS[1]} />}
-            {p3 && <PodiumCard place={3} name={p3.name} score={p3.score} isMe={p3.isMe} avatarUrl={PODIUM_AVATARS[3]} />}
+            {p2 && <PodiumCard place={2} name={p2.name} score={p2.score} isMe={p2.isMe} avatarUrl={avatarForId(p2.id)} />}
+            {p1 && <PodiumCard place={1} name={p1.name} score={p1.score} isMe={p1.isMe} avatarUrl={avatarForId(p1.id)} />}
+            {p3 && <PodiumCard place={3} name={p3.name} score={p3.score} isMe={p3.isMe} avatarUrl={avatarForId(p3.id)} />}
           </div>
         </GlassPanel>
 
@@ -81,6 +73,7 @@ function RankingPage() {
                 subtitle={scope === "geral" ? p.school : scope === "escola" ? p.classCode : p.school}
                 score={p.score}
                 isMe={p.isMe}
+                avatarUrl={avatarForId(p.id)}
               />
             ))}
           </div>
