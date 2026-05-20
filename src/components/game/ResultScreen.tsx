@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from "react";
 import { Star, Sparkles, Crown, Trophy, BookOpen } from "lucide-react";
 import { Button3D } from "./Button3D";
-import kCoin from "@/assets/k-coin.webp";
+import kCoin from "@/assets/k-coin-v2.png";
 import { cn } from "@/lib/utils";
 import { MestreAvatar, MestreSpeech } from "./MestreAvatar";
 import { pickLine } from "@/lib/mestreLines";
@@ -36,14 +36,14 @@ export function ResultScreen({
     playSfx(isBoss ? "bossVictory" : isContent ? "lessonComplete" : "victory");
   }, [isBoss, isContent]);
   const heading =
-    title ?? (isBoss ? "Boss derrotado!" : isContent ? "Conteúdo dominado!" : "Fase concluída!");
+    title ?? (isBoss ? "Chefão derrotado!" : isContent ? "Briefing dominado!" : "Missão concluída!");
   const sub =
     subtitle ??
     (isBoss
-      ? "Você venceu o Mestre — recompensa lendária!"
+      ? "Você venceu o desafio supremo — recompensa estelar!"
       : isContent
       ? "Você desbloqueou a próxima Prática."
-      : "Mandou muito bem nessa rodada!");
+      : "Mandou muito bem nessa órbita, cadete!");
   return (
     <div className="fixed inset-0 z-50 grid place-items-center bg-black/85 px-6 animate-fade-in">
       <div
@@ -89,7 +89,7 @@ export function ResultScreen({
             isBoss ? "text-game-accent" : isContent ? "text-game-neon" : "text-game-gold",
           )}
         >
-          {isBoss ? "Vitória lendária" : isContent ? "Conteúdo concluído" : "Fase concluída"}
+          {isBoss ? "Vitória estelar" : isContent ? "Briefing concluído" : "Missão concluída"}
         </p>
         <h2 className="mt-1 font-display text-2xl text-foreground">{heading}</h2>
         <p className="mt-1 text-sm text-muted-foreground">{sub}</p>
@@ -118,9 +118,9 @@ export function ResultScreen({
             <p className="text-[10px] uppercase tracking-wider text-muted-foreground">XP</p>
           </div>
           <div className="rounded-2xl border border-white/10 bg-black/30 p-3 animate-[pop_0.25s_ease-out_0.26s_both]">
-            <img src={kCoin} alt="K-Coin" width={32} height={32} className="mx-auto h-7 w-7" />
+            <img src={kCoin} alt="Créditos Estelares" width={32} height={32} className="mx-auto h-7 w-7" />
             <p className="mt-1 font-display text-xl text-game-gold">+{coins}</p>
-            <p className="text-[10px] uppercase tracking-wider text-muted-foreground">K-Coin</p>
+            <p className="text-[10px] uppercase tracking-wider text-muted-foreground">Créditos</p>
           </div>
         </div>
         {!isContent && (

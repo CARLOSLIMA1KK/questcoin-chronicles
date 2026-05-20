@@ -1,9 +1,9 @@
-import worldBomSenso from "@/assets/world-bom-senso.webp";
-import worldMesada from "@/assets/world-mesada.webp";
-import worldJuros from "@/assets/world-juros.webp";
-import worldConsumidor from "@/assets/world-consumidor.webp";
-import worldMetas from "@/assets/world-metas.webp";
-import worldCartao from "@/assets/world-cartao.webp";
+import worldBomSenso from "@/assets/world-bom-senso-v2.webp";
+import worldMesada from "@/assets/world-mesada-v2.webp";
+import worldJuros from "@/assets/world-juros-v2.webp";
+import worldConsumidor from "@/assets/world-consumidor-v2.webp";
+import worldMetas from "@/assets/world-metas-v2.webp";
+import worldCartao from "@/assets/world-cartao-v2.webp";
 
 export type StageType = "content" | "practice" | "boss";
 
@@ -135,12 +135,12 @@ const world6 = buildPaired("cartao", [
 ], "Imperador do Plástico", "Use o cartão sem cair em armadilhas.", "EM13MAT104");
 
 export const WORLDS: World[] = [
-  { id: "bom-senso", index: 1, name: "Vila do Bom Senso", axis: "Necessidade × Desejo / Consumo Consciente", accent: "neon",   icon: worldBomSenso,  stages: makeStages("bom-senso", world1) },
-  { id: "mesada",    index: 2, name: "Floresta da Mesada", axis: "Planejamento e Orçamento Pessoal",         accent: "gold",   icon: worldMesada,    stages: makeStages("mesada", world2) },
-  { id: "juros",     index: 3, name: "Cavernas dos Juros",  axis: "Juros, Dívida e Crédito",                  accent: "accent", icon: worldJuros,     stages: makeStages("juros", world3) },
-  { id: "consumidor",index: 4, name: "Reino do Consumidor", axis: "Direitos do Consumidor / Educação Fiscal", accent: "purple", icon: worldConsumidor,stages: makeStages("consumidor", world4) },
-  { id: "metas",     index: 5, name: "Pico das Metas",      axis: "Metas e Poupança",                          accent: "gold",   icon: worldMetas,     stages: makeStages("metas", world5) },
-  { id: "cartao",    index: 6, name: "Templo do Cartão",    axis: "Cartão, Pix e Meios de Pagamento",          accent: "neon",   icon: worldCartao,    stages: makeStages("cartao", world6) },
+  { id: "bom-senso", index: 1, name: "Lua do Bom Senso",        axis: "Necessidade × Desejo / Consumo Consciente", accent: "neon",   icon: worldBomSenso,  stages: makeStages("bom-senso", world1) },
+  { id: "mesada",    index: 2, name: "Planeta Mesada",          axis: "Planejamento e Orçamento Pessoal",         accent: "gold",   icon: worldMesada,    stages: makeStages("mesada", world2) },
+  { id: "juros",     index: 3, name: "Galáxia dos Juros",       axis: "Juros, Dívida e Crédito",                  accent: "accent", icon: worldJuros,     stages: makeStages("juros", world3) },
+  { id: "consumidor",index: 4, name: "Nebulosa do Consumidor",  axis: "Direitos do Consumidor / Educação Fiscal", accent: "purple", icon: worldConsumidor,stages: makeStages("consumidor", world4) },
+  { id: "metas",     index: 5, name: "Estação das Metas",       axis: "Metas e Poupança",                          accent: "gold",   icon: worldMetas,     stages: makeStages("metas", world5) },
+  { id: "cartao",    index: 6, name: "Cinturão do Cartão",      axis: "Cartão, Pix e Meios de Pagamento",          accent: "neon",   icon: worldCartao,    stages: makeStages("cartao", world6) },
 ];
 
 export function getStage(id: string): Stage | undefined {

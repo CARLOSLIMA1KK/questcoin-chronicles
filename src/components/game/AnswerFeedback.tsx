@@ -43,7 +43,7 @@ export function AnswerFeedback({
           </div>
           <div className="min-w-0 flex-1">
             <p className="font-display text-lg leading-tight text-white">{line}</p>
-            <p className="mt-1 text-[11px] uppercase tracking-wider text-white/60">Mestre Finan</p>
+            <p className="mt-1 text-[11px] uppercase tracking-wider text-white/60">Astrodin</p>
           </div>
         </div>
         <p className="text-sm text-white/90">{explanation}</p>
