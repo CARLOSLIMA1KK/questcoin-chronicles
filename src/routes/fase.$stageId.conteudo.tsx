@@ -146,7 +146,7 @@ function ContentScreen() {
             coins={stage.rewards.coins}
             onContinue={() => {
               toast.success("Prática liberada!", {
-                description: `+${stage.rewards.xp} XP · +${stage.rewards.coins} K-Coin`,
+                description: `+${stage.rewards.xp} XP · +${stage.rewards.coins} Star Coin`,
               });
               navigate({ to: "/" });
             }}

@@ -153,10 +153,10 @@ export function PlayerHeader() {
         </div>
       </div>
 
-      {/* K-Coin: Saldo + Investimento (flat sobre o glass do header) */}
+      {/* Star Coin: Saldo + Investimento (flat sobre o glass do header) */}
       <Link
         to="/cofrinho"
-        aria-label={`Cofrinho. Saldo ${Math.floor(balance)} K-Coin, investido ${Math.floor(invested)} K-Coin`}
+        aria-label={`Cofrinho. Saldo ${Math.floor(balance)} Star Coin, investido ${Math.floor(invested)} Star Coin`}
         className="flex flex-col gap-1.5 transition-transform active:scale-95"
       >
         {/* Saldo */}

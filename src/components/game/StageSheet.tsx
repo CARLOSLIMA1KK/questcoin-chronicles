@@ -92,7 +92,7 @@ export function StageSheet({
               +{stage.rewards.xp} XP
             </span>
             <span className="text-muted-foreground">·</span>
-            <img src={kCoin} alt="K-Coin" width={24} height={24} className="h-6 w-6" />
+            <img src={kCoin} alt="Star Coin" width={24} height={24} className="h-6 w-6" />
             <span className="font-display text-sm text-game-gold">
               +{stage.rewards.coins}
             </span>
