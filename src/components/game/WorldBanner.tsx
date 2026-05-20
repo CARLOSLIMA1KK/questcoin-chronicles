@@ -81,7 +81,7 @@ export function WorldBanner({
         <div className="flex min-w-0 items-center gap-4">
           <div
             className={cn(
-              "relative grid h-16 w-16 shrink-0 place-items-center rounded-2xl border bg-gradient-to-br [box-shadow:0_6px_18px_-6px_oklch(0_0_0/0.6)] sm:h-[72px] sm:w-[72px]",
+              "relative grid h-16 w-16 shrink-0 place-items-center rounded-full border bg-gradient-to-br [box-shadow:0_6px_18px_-6px_oklch(0_0_0/0.6)] sm:h-[72px] sm:w-[72px]",
               ACCENT_DISC[world.accent],
             )}
           >
