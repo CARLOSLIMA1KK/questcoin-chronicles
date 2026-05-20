@@ -5,9 +5,9 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Mestre Finan — Design System (gamificação financeira)
- * Inspirado em jogos mobile: roxos profundos, ouro, neon.
- * Todas as cores em oklch.
+ * FORME — Astrodin Design System (educação financeira gamificada)
+ * Identidade: azul-marinho profundo + laranja vibrante FORME, com acentos
+ * amarelo e roxo cósmico do Astrodin. Todas as cores em oklch.
  */
 
 @theme inline {
@@ -67,31 +67,38 @@
   --radius: 1rem;
   --font-display: "Luckiest Guy", "Inter", system-ui, sans-serif;
 
-  /* Brand */
-  --game-purple: oklch(0.25 0.14 295);          /* #2D1B69 */
-  --game-purple-light: oklch(0.38 0.18 305);    /* #5C2D91 */
-  --game-gold: oklch(0.86 0.17 88);             /* #FFD700 */
-  --game-gold-dark: oklch(0.62 0.13 75);        /* #B8860B */
-  --game-neon: oklch(0.92 0.29 140);            /* #39FF14 */
-  --game-accent: oklch(0.7 0.32 330);           /* #FF00FF */
+  /* FORME / Astrodin brand
+   * --game-purple        ~ #0d1b3d  navy FORME
+   * --game-purple-light  ~ #1f3266  navy claro
+   * --game-gold          ~ #ff6a1f  laranja FORME (primary)
+   * --game-gold-dark     ~ #c44a0d  laranja sombra (botões 3D)
+   * --game-neon          ~ #ffc83d  amarelo Astrodin
+   * --game-accent        ~ #6b4ec9  roxo cósmico
+   */
+  --game-purple: oklch(0.20 0.08 265);
+  --game-purple-light: oklch(0.32 0.09 265);
+  --game-gold: oklch(0.70 0.20 45);
+  --game-gold-dark: oklch(0.52 0.18 40);
+  --game-neon: oklch(0.84 0.16 85);
+  --game-accent: oklch(0.55 0.18 290);
 
   /* Semantic */
-  --background: oklch(0.18 0.1 295);            /* deep purple bg */
-  --foreground: oklch(0.98 0.01 280);
-  --card: oklch(0.25 0.14 295);
-  --card-foreground: oklch(0.98 0.01 280);
-  --popover: oklch(0.25 0.14 295);
-  --popover-foreground: oklch(0.98 0.01 280);
+  --background: oklch(0.16 0.07 265);
+  --foreground: oklch(0.98 0.01 250);
+  --card: oklch(0.22 0.08 265);
+  --card-foreground: oklch(0.98 0.01 250);
+  --popover: oklch(0.22 0.08 265);
+  --popover-foreground: oklch(0.98 0.01 250);
   --primary: var(--game-gold);
-  --primary-foreground: oklch(0.2 0.05 290);
+  --primary-foreground: oklch(0.98 0.01 250);
   --secondary: var(--game-purple-light);
-  --secondary-foreground: oklch(0.98 0.01 280);
-  --muted: oklch(0.3 0.1 295);
-  --muted-foreground: oklch(0.78 0.05 295);
+  --secondary-foreground: oklch(0.98 0.01 250);
+  --muted: oklch(0.28 0.06 265);
+  --muted-foreground: oklch(0.78 0.04 260);
   --accent: var(--game-accent);
-  --accent-foreground: oklch(0.98 0.01 280);
-  --destructive: oklch(0.65 0.25 25);
-  --destructive-foreground: oklch(0.98 0.01 280);
+  --accent-foreground: oklch(0.98 0.01 250);
+  --destructive: oklch(0.62 0.24 25);
+  --destructive-foreground: oklch(0.98 0.01 250);
   --border: oklch(1 0 0 / 12%);
   --input: oklch(1 0 0 / 15%);
   --ring: var(--game-gold);
@@ -100,25 +107,27 @@
   --chart-3: var(--game-accent);
   --chart-4: var(--game-purple-light);
   --chart-5: oklch(0.75 0.18 220);
-  --sidebar: oklch(0.22 0.12 295);
-  --sidebar-foreground: oklch(0.98 0.01 280);
+  --sidebar: oklch(0.19 0.08 265);
+  --sidebar-foreground: oklch(0.98 0.01 250);
   --sidebar-primary: var(--game-gold);
-  --sidebar-primary-foreground: oklch(0.2 0.05 290);
-  --sidebar-accent: oklch(0.3 0.14 300);
-  --sidebar-accent-foreground: oklch(0.98 0.01 280);
+  --sidebar-primary-foreground: oklch(0.98 0.01 250);
+  --sidebar-accent: oklch(0.28 0.08 265);
+  --sidebar-accent-foreground: oklch(0.98 0.01 250);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: var(--game-gold);
 
   /* Reusable design tokens */
-  --gradient-hero: linear-gradient(135deg, var(--game-purple) 0%, var(--game-purple-light) 100%);
+  --gradient-hero: linear-gradient(135deg, var(--game-purple) 0%, var(--game-accent) 100%);
+  --gradient-cosmic: linear-gradient(160deg, oklch(0.14 0.07 265) 0%, oklch(0.25 0.10 290) 60%, oklch(0.18 0.08 270) 100%);
   --gradient-gold: linear-gradient(180deg, var(--game-gold) 0%, var(--game-gold-dark) 100%);
-  --gradient-neon: linear-gradient(135deg, var(--game-neon) 0%, oklch(0.78 0.22 160) 100%);
-  --shadow-3d-gold: 0 4px 0 0 var(--game-gold-dark), 0 6px 16px -4px oklch(0 0 0 / 0.4);
-  --shadow-3d-purple: 0 4px 0 0 oklch(0.18 0.1 295), 0 6px 16px -4px oklch(0 0 0 / 0.4);
-  --shadow-3d-neon: 0 4px 0 0 oklch(0.55 0.22 145), 0 6px 16px -4px oklch(0 0 0 / 0.4);
-  --shadow-glow-neon: 0 0 24px oklch(0.92 0.29 140 / 0.55), 0 0 48px oklch(0.92 0.29 140 / 0.25);
-  --shadow-glow-gold: 0 0 24px oklch(0.86 0.17 88 / 0.55);
-  --glass-bg: oklch(0.18 0.1 295 / 0.55);
+  --gradient-forme: linear-gradient(135deg, var(--game-gold) 0%, var(--game-neon) 100%);
+  --gradient-neon: linear-gradient(135deg, var(--game-neon) 0%, var(--game-gold) 100%);
+  --shadow-3d-gold: 0 4px 0 0 var(--game-gold-dark), 0 6px 16px -4px oklch(0 0 0 / 0.45);
+  --shadow-3d-purple: 0 4px 0 0 oklch(0.14 0.07 265), 0 6px 16px -4px oklch(0 0 0 / 0.45);
+  --shadow-3d-neon: 0 4px 0 0 oklch(0.62 0.16 75), 0 6px 16px -4px oklch(0 0 0 / 0.45);
+  --shadow-glow-neon: 0 0 24px oklch(0.84 0.16 85 / 0.55), 0 0 48px oklch(0.84 0.16 85 / 0.25);
+  --shadow-glow-gold: 0 0 24px oklch(0.70 0.20 45 / 0.55);
+  --glass-bg: oklch(0.18 0.08 265 / 0.6);
   --glass-border: oklch(1 0 0 / 0.18);
 }
 
@@ -127,8 +136,8 @@
   50% { transform: rotateY(180deg); }
 }
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 12px oklch(0.92 0.29 140 / 0.5), 0 0 24px oklch(0.92 0.29 140 / 0.25); }
-  50% { box-shadow: 0 0 28px oklch(0.92 0.29 140 / 0.85), 0 0 56px oklch(0.92 0.29 140 / 0.4); }
+  0%, 100% { box-shadow: 0 0 12px oklch(0.84 0.16 85 / 0.5), 0 0 24px oklch(0.84 0.16 85 / 0.25); }
+  50% { box-shadow: 0 0 28px oklch(0.84 0.16 85 / 0.85), 0 0 56px oklch(0.84 0.16 85 / 0.4); }
 }
 @keyframes float {
   0%, 100% { transform: translateY(0); }
@@ -187,8 +196,8 @@
 }
 
 @keyframes shield-ready-pulse {
-  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 4px oklch(0.92 0.29 140 / 0.7)); }
-  50%      { transform: scale(1.18); filter: drop-shadow(0 0 10px oklch(0.92 0.29 140 / 0.95)); }
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 4px oklch(0.84 0.16 85 / 0.7)); }
+  50%      { transform: scale(1.18); filter: drop-shadow(0 0 10px oklch(0.84 0.16 85 / 0.95)); }
 }
 
 @layer base {
@@ -201,8 +210,11 @@
     color: var(--color-foreground);
     font-family: "Inter", system-ui, sans-serif;
     background-image:
-      radial-gradient(ellipse at top, oklch(0.32 0.16 300 / 0.6), transparent 60%),
-      radial-gradient(ellipse at bottom, oklch(0.22 0.14 280 / 0.5), transparent 60%);
+      radial-gradient(ellipse at top, oklch(0.32 0.12 285 / 0.55), transparent 60%),
+      radial-gradient(ellipse at bottom, oklch(0.20 0.10 260 / 0.5), transparent 60%),
+      radial-gradient(circle at 20% 30%, oklch(1 0 0 / 0.04) 0 1px, transparent 1px),
+      radial-gradient(circle at 75% 65%, oklch(1 0 0 / 0.05) 0 1px, transparent 1px),
+      radial-gradient(circle at 55% 85%, oklch(1 0 0 / 0.04) 0 1px, transparent 1px);
     background-attachment: fixed;
   }
 
