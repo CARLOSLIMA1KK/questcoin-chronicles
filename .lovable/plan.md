@@ -1,36 +1,19 @@
-## Objetivo
+## Plano
 
-Trocar a arte atual do Astrodin (cadete dentro do traje) pela arte oficial enviada (capacete azul translúcido, mochila/foguete laranja). Manter o mesmo personagem em todas as telas e gerar variações fiéis de humor para os feedbacks.
+Vou ajustar o mapa para o Astrodin aparecer de forma confiável ao lado da fase atual, sem depender de cache ou de estados escondidos.
 
-## Passos
+### O que encontrei
+- A arte `astrodin-rocket-v2.png` existe e está correta.
+- O código atual só mostra o foguete quando a fase tem status `current`.
+- Na sua tela, depois de limpar storage/cache, o mapa aparece com placeholders/esqueletos e não há imagem do Astrodin no DOM do mapa; isso indica que a condição atual não está encontrando uma fase `current` visível naquele momento.
+- O Astrodin visível no canto inferior direito parece ser o botão flutuante/chat, não o marcador da trilha.
 
-1. **Salvar a arte oficial**
-   - Copiar `user-uploads://Captura_de_Tela_2026-05-25_às_09.50.16-removebg-preview.png` para `src/assets/astrodin-oficial.png` (base canônica do personagem, fundo transparente).
-
-2. **Gerar variações de humor com `imagegen--edit_image`** a partir da arte oficial — mesma silhueta, mesmas cores, mudando só expressão/pose. Todas com fundo transparente:
-   - `src/assets/astrodin-avatar-v2.png` — pose neutra, olhar pra frente (default do chat).
-   - `src/assets/astrodin-happy-v2.png` — expressão alegre, leve celebração (acerto, conquista).
-   - `src/assets/astrodin-sad-v2.png` — expressão preocupada/encorajadora (erro, escudo perdido).
-   - `src/assets/astrodin-thinking-v2.png` — pose pensativa, mão no capacete (boss, dica).
-   - `src/assets/astrodin-hero-v2.png` — pose heroica em maior destaque (telas hero/onboarding).
-   - `src/assets/astrodin-rocket-v2.png` — Astrodin oficial decolando com o foguete laranja (loader/animações).
-
-3. **Atualizar `src/lib/brandAssets.ts`**
-   - Trocar os 6 imports `astrodin-*.png` pelas novas versões `*-v2.png`.
-   - Manter a estrutura do objeto `ASTRODIN` igual — nenhum consumidor precisa mudar.
-
-4. **QA visual**
-   - Conferir cada PNG gerado: silhueta consistente, fundo realmente transparente, cores fiéis (azul translúcido + laranja + branco).
-   - Validar `MestreAvatar` no chat, em `ResultScreen` (acerto/erro/boss) e no `GlobalLoader`.
-   - Confirmar que não há referência sobrevivente à arte antiga.
-
-## Detalhes técnicos
-
-- Os arquivos antigos (`astrodin-avatar.png`, `-happy`, `-sad`, `-thinking`, `-hero`, `-rocket`) ficam no repositório mas deixam de ser importados — sem risco de quebra; podem ser removidos numa limpeza posterior.
-- `MestreAvatar.tsx`, `GlobalLoader.tsx` e demais consumidores leem via `ASTRODIN.*` em `brandAssets.ts`, então a troca é centralizada num único arquivo.
-- Aspect ratio das edições: `1:1` (compatível com os ringues circulares do avatar). Para `hero-v2` usar `1:1` também por consistência com layout atual.
-
-## Fora de escopo
-
-- Nenhuma mudança em copy, rotas, lógica de quizzes ou economia de Star Coins.
-- Animações do loader continuam como estão (só o sprite é trocado).
+### Ajuste proposto
+1. Em `MapTrail.tsx`, calcular dentro do próprio mundo qual fase deve receber o marcador:
+   - priorizar a fase com status `current`;
+   - se não existir `current`, usar a primeira fase `available`;
+   - se também não existir, usar a última fase `completed`.
+2. Renderizar o Astrodin uma única vez nessa fase escolhida, em vez de depender exclusivamente de `status === "current"`.
+3. Manter o asset centralizado `ASTRODIN.rocket`, garantindo consistência global do personagem.
+4. Melhorar a posição no mobile para não ficar cortado nem escondido pelo botão do chat/rodapé.
+5. Validar no preview mobile que o Astrodin aparece ao lado da fase correta.
