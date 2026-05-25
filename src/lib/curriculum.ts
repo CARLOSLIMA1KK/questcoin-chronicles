@@ -139,7 +139,7 @@ const world6 = buildPaired("cartao", [
 export const WORLDS: World[] = [
   { id: "bom-senso", index: 1, name: "Lua do Bom Senso",        axis: "Necessidade × Desejo / Consumo Consciente", accent: "neon",   icon: worldBomSenso,  stages: makeStages("bom-senso", world1) },
   { id: "mesada",    index: 2, name: "Planeta Mesada",          axis: "Planejamento e Orçamento Pessoal",         accent: "gold",   icon: worldMesada,    stages: makeStages("mesada", world2) },
-  { id: "juros",     index: 3, name: "Galáxia dos Juros",       axis: "Juros, Dívida e Crédito",                  accent: "accent", icon: worldJuros,     stages: makeStages("juros", world3) },
+  { id: "juros",     index: 3, name: "Buraco Negro das Dívidas", axis: "Juros, Dívida e Crédito",                  accent: "accent", icon: worldJuros,     stages: makeStages("juros", world3) },
   { id: "consumidor",index: 4, name: "Nebulosa do Consumidor",  axis: "Direitos do Consumidor / Educação Fiscal", accent: "purple", icon: worldConsumidor,stages: makeStages("consumidor", world4) },
   { id: "metas",     index: 5, name: "Estação das Metas",       axis: "Metas e Poupança",                          accent: "gold",   icon: worldMetas,     stages: makeStages("metas", world5) },
   { id: "cartao",    index: 6, name: "Cinturão do Cartão",      axis: "Cartão, Pix e Meios de Pagamento",          accent: "neon",   icon: worldCartao,    stages: makeStages("cartao", world6) },
