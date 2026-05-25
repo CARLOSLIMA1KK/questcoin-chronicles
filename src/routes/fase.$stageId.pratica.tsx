@@ -12,6 +12,7 @@ import { getStage } from "@/lib/curriculum";
 import { WORLD1_PRACTICE, type Question } from "@/lib/world1Content";
 import { useProgress } from "@/lib/progress";
 import { cn } from "@/lib/utils";
+import { coinLabel } from "@/lib/brandAssets";
 
 export const Route = createFileRoute("/fase/$stageId/pratica")({
   head: () => ({
