@@ -710,7 +710,7 @@ function SimulatorSheet({
             Valor
           </span>
           <span className="font-display text-lg tabular-nums text-game-neon">
-            {fmt(amount)} <span className="text-xs text-white/50">Star Coin</span>
+            {fmt(amount)} <span className="text-xs text-white/50">{coinLabel(amount)}</span>
           </span>
         </div>
         <input
