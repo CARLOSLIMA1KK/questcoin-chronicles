@@ -46,7 +46,7 @@ const steps: Step[] = [
           </span>
           <div className="min-w-0 flex-1">
             <p className="truncate text-xs text-foreground">Comprar item lendário</p>
-            <p className="text-[10px] text-white/50 tabular-nums">3.000 / 5.000 Star Coin</p>
+            <p className="text-[10px] text-white/50 tabular-nums">3.000 / 5.000 Star Coins</p>
           </div>
         </div>
         <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-black/40">
