@@ -395,7 +395,7 @@ function ActionSheet({
 
         <p className="text-xs text-white/60">
           Disponível:{" "}
-          <span className="font-display text-foreground">{fmt(max)} Star Coin</span>
+          <span className="font-display text-foreground">{fmt(max)} {coinLabel(max)}</span>
         </p>
 
         <div className="mt-3">
