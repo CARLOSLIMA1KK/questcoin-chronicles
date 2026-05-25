@@ -40,7 +40,7 @@ const SUGGESTIONS = [
   {
     short: "Metas",
     text: "Como planejar uma meta de compra?",
-    greeting: `Saudações, cadete!\n\nToda grande conquista começa com uma meta clara — um destino no mapa estelar para guiar seus créditos.\n\nO que você sonha em conquistar? Vamos transformar esse sonho em um plano.`,
+    greeting: `Saudações, cadete!\n\nToda grande conquista começa com uma meta clara — um destino no mapa estelar para guiar seus Star Coins.\n\nO que você sonha em conquistar? Vamos transformar esse sonho em um plano.`,
   },
   {
     short: "Cartão",
