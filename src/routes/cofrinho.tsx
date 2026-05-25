@@ -756,7 +756,7 @@ function SimulatorSheet({
           <div className="flex items-center justify-between px-3 py-2">
             <dt className="text-white/60">Valor inicial</dt>
             <dd className="font-display tabular-nums text-foreground">
-              {fmt(amount)} <span className="text-xs text-white/50">Star Coin</span>
+              {fmt(amount)} <span className="text-xs text-white/50">{coinLabel(amount)}</span>
             </dd>
           </div>
           <div className="flex items-center justify-between px-3 py-2">
