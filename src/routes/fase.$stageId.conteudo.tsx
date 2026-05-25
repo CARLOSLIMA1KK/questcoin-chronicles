@@ -11,6 +11,7 @@ import { getStage } from "@/lib/curriculum";
 import { WORLD1_CONTENT } from "@/lib/world1Content";
 import { useProgress } from "@/lib/progress";
 import { cn } from "@/lib/utils";
+import { coinLabel } from "@/lib/brandAssets";
 
 export const Route = createFileRoute("/fase/$stageId/conteudo")({
   head: () => ({
