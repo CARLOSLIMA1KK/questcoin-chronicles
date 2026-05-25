@@ -45,7 +45,7 @@ export const Route = createFileRoute("/cofrinho")({
       {
         name: "description",
         content:
-          "Invista seus Star Coin em um CDB simulado e veja seu dinheiro render todos os dias.",
+          "Invista seus Star Coins em um CDB simulado e veja seu dinheiro render todos os dias.",
       },
       { property: "og:title", content: "Cofrinho — Astrodin" },
       {
