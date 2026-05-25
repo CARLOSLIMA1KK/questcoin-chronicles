@@ -1,6 +1,8 @@
 import type { World } from "@/lib/curriculum";
 import type { StageStatus } from "@/lib/progress";
 import { StageNode } from "./StageNode";
+import { ASTRODIN } from "@/lib/brandAssets";
+import { cn } from "@/lib/utils";
 
 const POSITIONS = [15, 50, 85, 50, 15, 50, 85]; // % horizontal, ciclo zig-zag
 
@@ -56,6 +58,10 @@ export function MapTrail({
       {world.stages.map((stage, i) => {
         const x = POSITIONS[i % POSITIONS.length];
         const top = i * ROW_H + 10;
+        const status = statusOf(stage);
+        const isCurrent = status === "current";
+        // Posiciona o Astrodin do lado oposto à borda mais próxima do nó
+        const astrodinOnRight = x < 50;
         return (
           <div
             key={stage.id}
@@ -64,9 +70,31 @@ export function MapTrail({
           >
             <StageNode
               stage={stage}
-              status={statusOf(stage)}
+              status={status}
               onClick={() => onStageClick(stage.id)}
             />
+            {isCurrent && (
+              <div
+                aria-hidden
+                className={cn(
+                  "pointer-events-none absolute top-1/2 -translate-y-1/2",
+                  "animate-[float_3s_ease-in-out_infinite] motion-reduce:animate-none",
+                  astrodinOnRight ? "left-full ml-1" : "right-full mr-1",
+                )}
+              >
+                <img
+                  src={ASTRODIN.rocket}
+                  alt=""
+                  width={72}
+                  height={72}
+                  className={cn(
+                    "h-16 w-16 object-contain drop-shadow-[0_6px_12px_oklch(0_0_0/0.55)]",
+                    !astrodinOnRight && "-scale-x-100",
+                  )}
+                  draggable={false}
+                />
+              </div>
+            )}
           </div>
         );
       })}
