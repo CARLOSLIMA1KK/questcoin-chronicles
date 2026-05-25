@@ -9,6 +9,7 @@ import { useWallet, wallet } from "@/lib/wallet";
 import { GlassPanel } from "./GlassPanel";
 import { SfxToggle } from "./SfxToggle";
 import { cn } from "@/lib/utils";
+import { coinLabel } from "@/lib/brandAssets";
 import kCoin from "@/assets/k-coin-v2.png";
 import avatarCarlos from "@/assets/avatar-carlos.webp";
 
