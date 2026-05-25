@@ -109,7 +109,7 @@ export function WorldBanner({
             <p className="text-[10px] uppercase tracking-wider text-muted-foreground/70">
               Mundo {world.index}
             </p>
-            <h2 className={cn("font-display text-xl font-bold leading-tight tracking-tight line-clamp-1 sm:text-2xl", ACCENT_TEXT[world.accent])}>
+            <h2 className={cn("font-display text-xl font-bold leading-tight tracking-tight sm:text-2xl break-words", ACCENT_TEXT[world.accent])}>
               {world.name}
             </h2>
             <p className="mt-1 line-clamp-2 text-[13px] leading-snug text-white/55">
