@@ -16,7 +16,7 @@ export type Player = {
 };
 
 const MOCK_PLAYER: Player = {
-  name: "Carlos Lima",
+  name: "Ana Beatriz",
   title: "Escola Timbaubense",
   level: 12,
   xp: 340,

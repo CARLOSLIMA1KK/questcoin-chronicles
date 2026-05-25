@@ -80,7 +80,7 @@ export function PlayerHeader() {
           </svg>
           <div className="absolute inset-[6px] overflow-hidden rounded-full bg-game-purple-light">
             <img
-              src={avatarForId(name)}
+              src={avatarForId("p1")}
               alt={name}
               loading="eager"
               decoding="async"
