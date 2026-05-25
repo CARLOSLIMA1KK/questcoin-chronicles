@@ -112,12 +112,12 @@ const world3 = buildPaired("juros", [
 ], "Dragão dos Juros", "Vença a dívida no menor tempo.", "EM13MAT104");
 
 const world4 = buildPaired("consumidor", [
-  { kind: "q", title: "Seus direitos básicos", desc: "CDC em 5 minutos.", bncc: "EF07HI11" },
-  { kind: "q", title: "Nota fiscal", desc: "Por que pedir sempre.", bncc: "EF08CH08" },
-  { kind: "c", title: "Reclamação certa", desc: "Monte uma reclamação no Procon.", bncc: "EF09LP10" },
-  { kind: "q", title: "Garantia e troca", desc: "Prazos e regras.", bncc: "EF07HI11" },
-  { kind: "c", title: "De onde vem o imposto", desc: "Distribua tributos por serviço público.", bncc: "EF08CH08" },
-], "Juiz do Consumidor", "Resolva 5 casos seguidos.", "EF09LP10");
+  { kind: "q", title: "O que é empreender?", desc: "Mentalidade e atitude empreendedora.", bncc: "EF09GE03" },
+  { kind: "q", title: "Identificando oportunidades", desc: "Como enxergar problemas como negócio.", bncc: "EF09GE03" },
+  { kind: "c", title: "Sua primeira ideia", desc: "Monte um mini plano de negócio.", bncc: "EF09LP10" },
+  { kind: "q", title: "Custos x preço de venda", desc: "Como precificar para ter lucro.", bncc: "EF08MA04" },
+  { kind: "c", title: "Cliente em primeiro lugar", desc: "Conquiste e fidelize clientes.", bncc: "EF09LP10" },
+], "Jovem Empreendedor", "Resolva 5 desafios seguidos.", "EF09LP10");
 
 const world5 = buildPaired("metas", [
   { kind: "q", title: "Metas SMART", desc: "Como definir um objetivo.", bncc: "EF09MA05" },
@@ -140,7 +140,7 @@ export const WORLDS: World[] = [
   { id: "bom-senso", index: 1, name: "Lua do Bom Senso",        axis: "Necessidade × Desejo / Consumo Consciente", accent: "neon",   icon: worldBomSenso,  stages: makeStages("bom-senso", world1) },
   { id: "mesada",    index: 2, name: "Planeta Mesada",          axis: "Planejamento e Orçamento Pessoal",         accent: "gold",   icon: worldMesada,    stages: makeStages("mesada", world2) },
   { id: "juros",     index: 3, name: "Buraco Negro das Dívidas", axis: "Juros, Dívida e Crédito",                  accent: "accent", icon: worldJuros,     stages: makeStages("juros", world3) },
-  { id: "consumidor",index: 4, name: "Nebulosa do Consumidor",  axis: "Direitos do Consumidor / Educação Fiscal", accent: "purple", icon: worldConsumidor,stages: makeStages("consumidor", world4) },
+  { id: "consumidor",index: 4, name: "Constelação Empreender",   axis: "Empreendedorismo e Mentalidade de Negócio", accent: "purple", icon: worldConsumidor,stages: makeStages("consumidor", world4) },
   { id: "metas",     index: 5, name: "Estação das Metas",       axis: "Metas e Poupança",                          accent: "gold",   icon: worldMetas,     stages: makeStages("metas", world5) },
   { id: "cartao",    index: 6, name: "Cinturão do Cartão",      axis: "Cartão, Pix e Meios de Pagamento",          accent: "neon",   icon: worldCartao,    stages: makeStages("cartao", world6) },
 ];
