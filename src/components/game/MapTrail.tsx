@@ -77,18 +77,18 @@ export function MapTrail({
               <div
                 aria-hidden
                 className={cn(
-                  "pointer-events-none absolute top-1/2 -translate-y-1/2",
+                  "pointer-events-none absolute top-1/2 z-20 -translate-y-1/2",
                   "animate-[float_3s_ease-in-out_infinite] motion-reduce:animate-none",
-                  astrodinOnRight ? "left-full ml-1" : "right-full mr-1",
+                  astrodinOnRight ? "left-full ml-2" : "right-full mr-2",
                 )}
               >
                 <img
                   src={ASTRODIN.rocket}
                   alt=""
-                  width={72}
-                  height={72}
+                  width={80}
+                  height={80}
                   className={cn(
-                    "h-16 w-16 object-contain drop-shadow-[0_6px_12px_oklch(0_0_0/0.55)]",
+                    "h-20 w-20 object-contain drop-shadow-[0_6px_14px_oklch(0_0_0/0.6)]",
                     !astrodinOnRight && "-scale-x-100",
                   )}
                   draggable={false}
