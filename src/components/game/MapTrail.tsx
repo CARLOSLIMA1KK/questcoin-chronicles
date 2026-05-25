@@ -37,6 +37,29 @@ export function MapTrail({
     }
   });
 
+  // Determina uma única fase para receber o marcador do Astrodin.
+  // O fallback garante que ele apareça mesmo quando não existe status "current".
+  const statuses = world.stages.map((s) => statusOf(s));
+  let markerIdx = statuses.findIndex((s) => s === "current");
+  if (markerIdx === -1) markerIdx = statuses.findIndex((s) => s === "available");
+  if (markerIdx === -1) {
+    for (let i = statuses.length - 1; i >= 0; i--) {
+      if (statuses[i] === "completed") {
+        markerIdx = i;
+        break;
+      }
+    }
+  }
+
+  const markerPoint = markerIdx >= 0 ? points[markerIdx] : null;
+  const markerLeft = markerPoint
+    ? markerPoint.x <= 25
+      ? markerPoint.x + 24
+      : markerPoint.x >= 75
+        ? markerPoint.x - 24
+        : markerPoint.x + 24
+    : 50;
+
   return (
     <div className="relative w-full" style={{ height }}>
       <svg
@@ -55,25 +78,10 @@ export function MapTrail({
         />
       </svg>
 
-      {(() => {
-        // Determina qual fase recebe o marcador do Astrodin neste mundo
-        const statuses = world.stages.map((s) => statusOf(s));
-        let markerIdx = statuses.findIndex((s) => s === "current");
-        if (markerIdx === -1) markerIdx = statuses.findIndex((s) => s === "available");
-        if (markerIdx === -1) {
-          for (let i = statuses.length - 1; i >= 0; i--) {
-            if (statuses[i] === "completed") {
-              markerIdx = i;
-              break;
-            }
-          }
-        }
-        return world.stages.map((stage, i) => {
+      {world.stages.map((stage, i) => {
           const x = POSITIONS[i % POSITIONS.length];
           const top = i * ROW_H + 10;
           const status = statuses[i];
-          const showAstrodin = i === markerIdx;
-          const astrodinOnRight = x < 50;
           return (
             <div
               key={stage.id}
@@ -85,32 +93,29 @@ export function MapTrail({
                 status={status}
                 onClick={() => onStageClick(stage.id)}
               />
-              {showAstrodin && (
-                <div
-                  aria-hidden
-                  className={cn(
-                    "pointer-events-none absolute top-1/2 z-20 -translate-y-1/2",
-                    "animate-[float_3s_ease-in-out_infinite] motion-reduce:animate-none",
-                    astrodinOnRight ? "left-full ml-2" : "right-full mr-2",
-                  )}
-                >
-                  <img
-                    src={ASTRODIN.rocket}
-                    alt=""
-                    width={80}
-                    height={80}
-                    className={cn(
-                      "h-20 w-20 object-contain drop-shadow-[0_6px_14px_oklch(0_0_0/0.6)]",
-                      !astrodinOnRight && "-scale-x-100",
-                    )}
-                    draggable={false}
-                  />
-                </div>
-              )}
             </div>
           );
-        });
-      })()}
+        })}
+
+      {markerPoint && (
+        <div
+          aria-hidden
+          className="pointer-events-none absolute z-30 -translate-x-1/2 -translate-y-1/2 animate-[float_3s_ease-in-out_infinite] motion-reduce:animate-none"
+          style={{ left: `${markerLeft}%`, top: markerPoint.y }}
+        >
+          <img
+            src={ASTRODIN.rocket}
+            alt=""
+            width={92}
+            height={92}
+            className={cn(
+              "h-[92px] w-[92px] object-contain drop-shadow-[0_8px_18px_oklch(0_0_0/0.7)]",
+              markerLeft < markerPoint.x && "-scale-x-100",
+            )}
+            draggable={false}
+          />
+        </div>
+      )}
 
     </div>
   );
