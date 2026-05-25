@@ -106,7 +106,7 @@ function LojaPage() {
 
         <GlassPanel className="p-3">
           <p className="text-[11px] leading-relaxed text-foreground/65">
-            <span className="font-semibold text-foreground">Dica do Mestre:</span>{" "}
+            <span className="font-semibold text-foreground">Dica do Astrodin:</span>{" "}
             cada Star Coin investido rende todo dia. Pense duas vezes antes de gastar! 💡
           </p>
         </GlassPanel>
