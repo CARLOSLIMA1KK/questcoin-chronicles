@@ -12,7 +12,7 @@ const GREETINGS = [
   "Cadete, posso te dar uma dica de órbita?",
   "Olá, herói da galáxia! Vamos planejar uma meta?",
   "Quer entender juros sem virar buraco negro?",
-  "Ei, tripulação! Bora investir uns créditos?",
+  "Ei, tripulação! Bora investir uns Star Coins?",
   "Pronto pra mais um briefing financeiro?",
 ];
 

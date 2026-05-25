@@ -2,6 +2,7 @@ import { useEffect, useMemo } from "react";
 import { Star, Sparkles, Crown, Trophy, BookOpen } from "lucide-react";
 import { Button3D } from "./Button3D";
 import kCoin from "@/assets/k-coin-v2.png";
+import { coinLabel } from "@/lib/brandAssets";
 import { cn } from "@/lib/utils";
 import { MestreAvatar, MestreSpeech } from "./MestreAvatar";
 import { pickLine } from "@/lib/mestreLines";
@@ -120,7 +121,7 @@ export function ResultScreen({
           <div className="rounded-2xl border border-white/10 bg-black/30 p-3 animate-[pop_0.25s_ease-out_0.26s_both]">
             <img src={kCoin} alt="Star Coin" width={32} height={32} className="mx-auto h-7 w-7" />
             <p className="mt-1 font-display text-xl text-game-gold">+{coins}</p>
-            <p className="text-[10px] uppercase tracking-wider text-muted-foreground">Créditos</p>
+            <p className="text-[10px] uppercase tracking-wider text-muted-foreground">{coinLabel(coins)}</p>
           </div>
         </div>
         {!isContent && (
