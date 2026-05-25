@@ -1,4 +1,6 @@
-import astrodinImg from "@/assets/astrodin-avatar.png";
+import { ASTRODIN } from "@/lib/brandAssets";
+
+const astrodinImg = ASTRODIN.avatar;
 import kCoin from "@/assets/k-coin-v2.png";
 import { useLoading } from "@/lib/loading";
 import { cn } from "@/lib/utils";
