@@ -3,12 +3,12 @@
 // src/assets/ mantendo o mesmo nome OU troque o import abaixo.
 // Veja docs em README.md → "Trocar artes oficiais".
 
-import astrodinHero from "@/assets/astrodin-hero.png";
-import astrodinAvatar from "@/assets/astrodin-avatar.png";
-import astrodinHappy from "@/assets/astrodin-happy.png";
-import astrodinSad from "@/assets/astrodin-sad.png";
-import astrodinThinking from "@/assets/astrodin-thinking.png";
-import astrodinRocket from "@/assets/astrodin-rocket.png";
+import astrodinHero from "@/assets/astrodin-hero-v2.png";
+import astrodinAvatar from "@/assets/astrodin-avatar-v2.png";
+import astrodinHappy from "@/assets/astrodin-happy-v2.png";
+import astrodinSad from "@/assets/astrodin-sad-v2.png";
+import astrodinThinking from "@/assets/astrodin-thinking-v2.png";
+import astrodinRocket from "@/assets/astrodin-rocket-v2.png";
 
 import worldBomSenso from "@/assets/world-bom-senso-v3.png";
 import worldMesada from "@/assets/world-mesada-v3.png";
