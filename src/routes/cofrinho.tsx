@@ -83,7 +83,7 @@ function CofrinhoPage() {
 
   return (
     <Screen>
-      <h1 className="sr-only">Cofrinho Star Coin</h1>
+      <h1 className="sr-only">Cofrinho Star Coins</h1>
 
       {/* Card principal */}
       <GlassPanel className="relative overflow-hidden bg-[image:var(--gradient-hero)] p-5">
