@@ -9,9 +9,8 @@ import { useWallet, wallet } from "@/lib/wallet";
 import { GlassPanel } from "./GlassPanel";
 import { SfxToggle } from "./SfxToggle";
 import { cn } from "@/lib/utils";
-import { coinLabel } from "@/lib/brandAssets";
+import { avatarForId, coinLabel } from "@/lib/brandAssets";
 import kCoin from "@/assets/k-coin-v2.png";
-import avatarCarlos from "@/assets/avatar-carlos.webp";
 
 export function PlayerHeader() {
   const { name, title, level, xp, xpToNext } = usePlayer();
@@ -81,7 +80,7 @@ export function PlayerHeader() {
           </svg>
           <div className="absolute inset-[6px] overflow-hidden rounded-full bg-game-purple-light">
             <img
-              src={avatarCarlos}
+              src={avatarForId(name)}
               alt={name}
               loading="eager"
               decoding="async"
