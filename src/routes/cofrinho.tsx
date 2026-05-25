@@ -101,7 +101,7 @@ function CofrinhoPage() {
             </p>
             <p className="font-display text-3xl leading-none text-foreground tabular-nums">
               {fmt(invested)}
-              <span className="ml-1 text-sm text-white/60">Star Coin</span>
+              <span className="ml-1 text-sm text-white/60">{coinLabel(invested)}</span>
             </p>
             <p className="mt-1 flex items-center gap-1 text-xs text-game-neon">
               <TrendingUp className="h-3.5 w-3.5" />
