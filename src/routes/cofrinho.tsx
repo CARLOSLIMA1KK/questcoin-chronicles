@@ -36,6 +36,7 @@ import {
 } from "@/lib/wallet";
 import type { WalletTx, WalletGoal } from "@/lib/wallet";
 import { playSfx } from "@/lib/sfx";
+import { coinLabel } from "@/lib/brandAssets";
 
 export const Route = createFileRoute("/cofrinho")({
   head: () => ({
