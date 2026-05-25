@@ -39,7 +39,7 @@ export function ShopItemCard({ item, balance, onBuy }: Props) {
       <div className="flex items-center gap-1 rounded-full bg-[color:var(--game-purple)]/60 px-2 py-1">
         <img src={kCoin} alt="" width={14} height={14} className="h-3.5 w-3.5" />
         <span className="font-display text-xs text-[color:var(--game-gold)]">
-          K-{item.price}
+          SC {item.price}
         </span>
       </div>
       <button
