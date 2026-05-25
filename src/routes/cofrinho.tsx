@@ -769,7 +769,7 @@ function SimulatorSheet({
           <div className="flex items-center justify-between bg-game-neon/5 px-3 py-2.5">
             <dt className="text-foreground">Valor final</dt>
             <dd className="font-display text-lg tabular-nums text-game-neon">
-              {fmt(projected)} <span className="text-xs text-white/50">Star Coin</span>
+              {fmt(projected)} <span className="text-xs text-white/50">{coinLabel(projected)}</span>
             </dd>
           </div>
         </dl>
