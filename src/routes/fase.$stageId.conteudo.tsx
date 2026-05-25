@@ -113,14 +113,14 @@ function ContentScreen() {
         </p>
         {slide.tip && (
           <div className="mt-6 flex items-end gap-2">
-            <MestreAvatar size="sm" mood="encourage" />
+            <MestreAvatar size="sm" mood="neutral" />
             <div className="relative flex-1 rounded-2xl rounded-bl-sm border border-game-gold/40 bg-game-gold/10 px-3 py-2.5 [box-shadow:0_4px_16px_-8px_oklch(0.86_0.17_88/0.5)]">
               <span
                 aria-hidden
                 className="absolute -left-1.5 bottom-2 h-3 w-3 rotate-45 border-b border-l border-game-gold/40 bg-game-gold/10"
               />
               <p className="text-xs italic text-game-gold/95">
-                <span className="font-display not-italic">Mestre:</span> {slide.tip}
+                <span className="font-display not-italic">Astrodin:</span> {slide.tip}
               </p>
             </div>
           </div>
