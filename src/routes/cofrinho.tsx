@@ -624,7 +624,7 @@ function GoalSheet({
         />
 
         <label className="mt-3 block text-[11px] uppercase tracking-wider text-white/50">
-          Valor da meta (Star Coin)
+          Valor da meta (Star Coins)
         </label>
         <input
           type="number"
