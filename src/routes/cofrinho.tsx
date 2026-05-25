@@ -525,7 +525,7 @@ function GoalPanel({
               {goal.label || "Minha meta"}
             </p>
             <p className="text-[11px] text-white/50 tabular-nums">
-              {fmt(invested)} / {fmt(goal.amount)} Star Coin
+              {fmt(invested)} / {fmt(goal.amount)} {coinLabel(goal.amount)}
             </p>
           </div>
           <button
