@@ -22,9 +22,9 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/loja")({
   head: () => ({
     meta: [
-      { title: "Loja do Mestre — Astrodin" },
+      { title: "Loja do Astrodin — Astrodin" },
       { name: "description", content: "Gaste seus Star Coins com sabedoria: escudos, presentes e boosts pra sua jornada." },
-      { property: "og:title", content: "Loja do Mestre — Astrodin" },
+      { property: "og:title", content: "Loja do Astrodin — Astrodin" },
       { property: "og:description", content: "Gaste seus Star Coins com sabedoria: escudos, presentes e boosts pra sua jornada." },
     ],
   }),
@@ -86,7 +86,7 @@ function LojaPage() {
               <Store className="h-5 w-5 text-[color:var(--game-purple)]" strokeWidth={2.5} />
             </div>
             <div className="flex-1">
-              <h1 className="font-display text-xl text-foreground">Loja do Mestre</h1>
+              <h1 className="font-display text-xl text-foreground">Loja do Astrodin</h1>
               <p className="text-xs text-foreground/65">Gaste com sabedoria — investir é melhor!</p>
             </div>
             <div className="flex items-center gap-1 rounded-full bg-[color:var(--game-purple)]/60 px-3 py-1.5">
