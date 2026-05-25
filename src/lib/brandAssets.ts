@@ -46,6 +46,12 @@ export const WORLDS_ART = {
 
 export const CURRENCY_ICON = starCoin;
 export const CURRENCY_NAME = "Star Coin";
+export const CURRENCY_NAME_PLURAL = "Star Coins";
+
+/** Retorna "Star Coin" no singular (n === 1) ou "Star Coins" no plural. */
+export function coinLabel(n: number): string {
+  return Math.abs(n) === 1 ? CURRENCY_NAME : CURRENCY_NAME_PLURAL;
+}
 
 export const STUDENT_AVATARS: string[] = [
   cadete1,

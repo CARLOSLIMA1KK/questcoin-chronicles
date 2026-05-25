@@ -141,7 +141,7 @@ export const wallet = {
   },
   deposit(amount: number) {
     const amt = Math.floor(amount);
-    if (amt < MIN_DEPOSIT) throw new Error(`Mínimo ${MIN_DEPOSIT} Star Coin`);
+    if (amt < MIN_DEPOSIT) throw new Error(`Mínimo ${MIN_DEPOSIT} Star Coins`);
     if (amt > state.balance) throw new Error("Saldo insuficiente");
     const { next } = accrueState(state);
     const tx: WalletTx = { id: `${Date.now()}-d`, type: "deposit", amount: amt, at: Date.now() };

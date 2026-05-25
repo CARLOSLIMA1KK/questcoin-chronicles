@@ -12,6 +12,7 @@ import { getStage } from "@/lib/curriculum";
 import { WORLD1_PRACTICE, type Question } from "@/lib/world1Content";
 import { useProgress } from "@/lib/progress";
 import { cn } from "@/lib/utils";
+import { coinLabel } from "@/lib/brandAssets";
 
 export const Route = createFileRoute("/fase/$stageId/pratica")({
   head: () => ({
@@ -186,7 +187,7 @@ function PracticeScreen() {
             coins={isBoss ? stage.rewards.coins + 100 : stage.rewards.coins}
             onContinue={() => {
               toast.success(isBoss ? "Boss derrotado!" : "Fase concluída!", {
-                description: `+${stage.rewards.xp} XP · +${stage.rewards.coins} Star Coin`,
+                description: `+${stage.rewards.xp} XP · +${stage.rewards.coins} ${coinLabel(stage.rewards.coins)}`,
               });
               navigate({ to: "/" });
             }}

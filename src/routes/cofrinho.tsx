@@ -36,6 +36,7 @@ import {
 } from "@/lib/wallet";
 import type { WalletTx, WalletGoal } from "@/lib/wallet";
 import { playSfx } from "@/lib/sfx";
+import { coinLabel } from "@/lib/brandAssets";
 
 export const Route = createFileRoute("/cofrinho")({
   head: () => ({
@@ -44,13 +45,13 @@ export const Route = createFileRoute("/cofrinho")({
       {
         name: "description",
         content:
-          "Invista seus Star Coin em um CDB simulado e veja seu dinheiro render todos os dias.",
+          "Invista seus Star Coins em um CDB simulado e veja seu dinheiro render todos os dias.",
       },
       { property: "og:title", content: "Cofrinho — Astrodin" },
       {
         property: "og:description",
         content:
-          "Invista seus Star Coin em um CDB simulado e veja seu dinheiro render todos os dias.",
+          "Invista seus Star Coins em um CDB simulado e veja seu dinheiro render todos os dias.",
       },
     ],
   }),
@@ -82,7 +83,7 @@ function CofrinhoPage() {
 
   return (
     <Screen>
-      <h1 className="sr-only">Cofrinho Star Coin</h1>
+      <h1 className="sr-only">Cofrinho Star Coins</h1>
 
       {/* Card principal */}
       <GlassPanel className="relative overflow-hidden bg-[image:var(--gradient-hero)] p-5">
@@ -100,7 +101,7 @@ function CofrinhoPage() {
             </p>
             <p className="font-display text-3xl leading-none text-foreground tabular-nums">
               {fmt(invested)}
-              <span className="ml-1 text-sm text-white/60">Star Coin</span>
+              <span className="ml-1 text-sm text-white/60">{coinLabel(invested)}</span>
             </p>
             <p className="mt-1 flex items-center gap-1 text-xs text-game-neon">
               <TrendingUp className="h-3.5 w-3.5" />
@@ -372,7 +373,7 @@ function ActionSheet({
 
   const setPct = (pct: number) => setValue(String(Math.floor((max * pct) / 100)));
 
-  const title = mode === "deposit" ? "Investir Star Coin" : "Resgatar Star Coin";
+  const title = mode === "deposit" ? "Investir Star Coins" : "Resgatar Star Coins";
   const cta = mode === "deposit" ? "Confirmar investimento" : "Resgatar agora";
 
   return (
@@ -394,7 +395,7 @@ function ActionSheet({
 
         <p className="text-xs text-white/60">
           Disponível:{" "}
-          <span className="font-display text-foreground">{fmt(max)} Star Coin</span>
+          <span className="font-display text-foreground">{fmt(max)} {coinLabel(max)}</span>
         </p>
 
         <div className="mt-3">
@@ -427,7 +428,7 @@ function ActionSheet({
             <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-game-gold" />
             <p className="text-xs text-white/80">
               Você deixará de ganhar{" "}
-              <span className="font-display text-game-gold">~{fmt(lost)} Star Coin</span>{" "}
+              <span className="font-display text-game-gold">~{fmt(lost)} {coinLabel(lost)}</span>{" "}
               nos próximos 30 dias.
             </p>
           </div>
@@ -435,7 +436,7 @@ function ActionSheet({
 
         {mode === "deposit" && (
           <p className="mt-3 text-[11px] text-white/50">
-            Mínimo {MIN_DEPOSIT} Star Coin · rende {(DAILY_RATE * 100).toFixed(1)}%/dia
+            Mínimo {MIN_DEPOSIT} {coinLabel(MIN_DEPOSIT)} · rende {(DAILY_RATE * 100).toFixed(1)}%/dia
           </p>
         )}
 
@@ -524,7 +525,7 @@ function GoalPanel({
               {goal.label || "Minha meta"}
             </p>
             <p className="text-[11px] text-white/50 tabular-nums">
-              {fmt(invested)} / {fmt(goal.amount)} Star Coin
+              {fmt(invested)} / {fmt(goal.amount)} {coinLabel(goal.amount)}
             </p>
           </div>
           <button
@@ -623,7 +624,7 @@ function GoalSheet({
         />
 
         <label className="mt-3 block text-[11px] uppercase tracking-wider text-white/50">
-          Valor da meta (Star Coin)
+          Valor da meta (Star Coins)
         </label>
         <input
           type="number"
@@ -709,7 +710,7 @@ function SimulatorSheet({
             Valor
           </span>
           <span className="font-display text-lg tabular-nums text-game-neon">
-            {fmt(amount)} <span className="text-xs text-white/50">Star Coin</span>
+            {fmt(amount)} <span className="text-xs text-white/50">{coinLabel(amount)}</span>
           </span>
         </div>
         <input
@@ -755,7 +756,7 @@ function SimulatorSheet({
           <div className="flex items-center justify-between px-3 py-2">
             <dt className="text-white/60">Valor inicial</dt>
             <dd className="font-display tabular-nums text-foreground">
-              {fmt(amount)} <span className="text-xs text-white/50">Star Coin</span>
+              {fmt(amount)} <span className="text-xs text-white/50">{coinLabel(amount)}</span>
             </dd>
           </div>
           <div className="flex items-center justify-between px-3 py-2">
@@ -768,7 +769,7 @@ function SimulatorSheet({
           <div className="flex items-center justify-between bg-game-neon/5 px-3 py-2.5">
             <dt className="text-foreground">Valor final</dt>
             <dd className="font-display text-lg tabular-nums text-game-neon">
-              {fmt(projected)} <span className="text-xs text-white/50">Star Coin</span>
+              {fmt(projected)} <span className="text-xs text-white/50">{coinLabel(projected)}</span>
             </dd>
           </div>
         </dl>
