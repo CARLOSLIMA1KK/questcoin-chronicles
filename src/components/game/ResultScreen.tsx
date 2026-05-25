@@ -2,6 +2,7 @@ import { useEffect, useMemo } from "react";
 import { Star, Sparkles, Crown, Trophy, BookOpen } from "lucide-react";
 import { Button3D } from "./Button3D";
 import kCoin from "@/assets/k-coin-v2.png";
+import { coinLabel } from "@/lib/brandAssets";
 import { cn } from "@/lib/utils";
 import { MestreAvatar, MestreSpeech } from "./MestreAvatar";
 import { pickLine } from "@/lib/mestreLines";
