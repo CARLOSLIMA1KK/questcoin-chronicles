@@ -436,7 +436,7 @@ function ActionSheet({
 
         {mode === "deposit" && (
           <p className="mt-3 text-[11px] text-white/50">
-            Mínimo {MIN_DEPOSIT} Star Coin · rende {(DAILY_RATE * 100).toFixed(1)}%/dia
+            Mínimo {MIN_DEPOSIT} {coinLabel(MIN_DEPOSIT)} · rende {(DAILY_RATE * 100).toFixed(1)}%/dia
           </p>
         )}
 
