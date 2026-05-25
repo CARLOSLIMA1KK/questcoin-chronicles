@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
 import { CloseX } from "@/components/game/CloseX";
 import { useNavigate } from "@tanstack/react-router";
-import astrodinImg from "@/assets/astrodin-avatar.png";
+import { ASTRODIN } from "@/lib/brandAssets";
+
+const astrodinImg = ASTRODIN.avatar;
 
 const GREETINGS = [
   "Olá, cadete! Pronto para mais uma missão?",
