@@ -1,7 +1,9 @@
 import { lazy, Suspense, useState } from "react";
 import { Plus, MessagesSquare, Trash2, Send } from "lucide-react";
 import type { UIMessage } from "ai";
-import mestreAvatar from "@/assets/astrodin-avatar.png";
+import { ASTRODIN } from "@/lib/brandAssets";
+
+const mestreAvatar = ASTRODIN.avatar;
 import {
   Sheet,
   SheetContent,
