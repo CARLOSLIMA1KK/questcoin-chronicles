@@ -373,7 +373,7 @@ function ActionSheet({
 
   const setPct = (pct: number) => setValue(String(Math.floor((max * pct) / 100)));
 
-  const title = mode === "deposit" ? "Investir Star Coin" : "Resgatar Star Coin";
+  const title = mode === "deposit" ? "Investir Star Coins" : "Resgatar Star Coins";
   const cta = mode === "deposit" ? "Confirmar investimento" : "Resgatar agora";
 
   return (
