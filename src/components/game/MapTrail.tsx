@@ -2,6 +2,7 @@ import type { World } from "@/lib/curriculum";
 import type { StageStatus } from "@/lib/progress";
 import { StageNode } from "./StageNode";
 import { ASTRODIN } from "@/lib/brandAssets";
+import { cn } from "@/lib/utils";
 
 const POSITIONS = [15, 50, 85, 50, 15, 50, 85]; // % horizontal, ciclo zig-zag
 
