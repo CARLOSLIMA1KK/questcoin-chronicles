@@ -1,7 +1,7 @@
 import shieldImg from "@/assets/shop-shield.webp";
 import giftImg from "@/assets/shop-gift.webp";
 import hintImg from "@/assets/shop-hint.webp";
-import potionImg from "@/assets/shop-potion.webp";
+import rocketImg from "@/assets/shop-rocket.png";
 
 export type ShopItemId = "shield" | "gift-shield" | "hint" | "potion-xp";
 
@@ -39,10 +39,10 @@ export const SHOP_ITEMS: ShopItem[] = [
   },
   {
     id: "potion-xp",
-    name: "Poção XP 2x",
+    name: "Foguete XP 2x",
     description: "Sua próxima fase rende o dobro de XP.",
     price: 120,
-    image: potionImg,
+    image: rocketImg,
   },
 ];
 
