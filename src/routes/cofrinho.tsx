@@ -428,7 +428,7 @@ function ActionSheet({
             <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-game-gold" />
             <p className="text-xs text-white/80">
               Você deixará de ganhar{" "}
-              <span className="font-display text-game-gold">~{fmt(lost)} Star Coin</span>{" "}
+              <span className="font-display text-game-gold">~{fmt(lost)} {coinLabel(lost)}</span>{" "}
               nos próximos 30 dias.
             </p>
           </div>
