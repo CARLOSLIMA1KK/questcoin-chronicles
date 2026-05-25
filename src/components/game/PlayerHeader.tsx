@@ -197,7 +197,7 @@ export function PlayerHeader() {
           </div>
           <div className="flex items-baseline gap-0.5">
             <span className="font-display text-[10px] font-bold leading-none text-game-neon">
-              K-
+              SC 
             </span>
             <span className="font-display text-sm font-bold leading-none text-foreground tabular-nums">
               {Math.floor(invested).toLocaleString("pt-BR")}
