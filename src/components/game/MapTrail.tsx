@@ -104,7 +104,7 @@ export function MapTrail({
           style={{ left: `${markerLeft}%`, top: markerPoint.y }}
         >
           <img
-            src={ASTRODIN.rocket}
+            src={ASTRODIN.happy}
             alt=""
             width={92}
             height={92}
